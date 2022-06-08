@@ -1,0 +1,22 @@
+
+$BGPC: #ebe4d7;
+$BG: #000000;
+
+$BP: 749px;
+$PCW: 1283px;
+$PATH: "../img";
+
+body{
+    font-family: "ヒラギノ角ゴ ProN W3","HiraKakuProN-W3","ヒラギノ角ゴ Pro W3","HiraKakuPro-W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS Pgothic","Osaka",sans-serif,Helvetica, Helvetica Neue, Arial, Verdana;
+}
+// スマホ設定（599px以下）
+
+
+
+@media screen and (max-width: $PCW) {
+        .main__ranking--first{
+            position: relative;
+            height: 34.29vw;
+        }
+    
+}

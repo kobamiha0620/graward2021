@@ -1,0 +1,165 @@
+#sp2{
+    .footer__splink{
+        background: #FFF;
+        font-size: 0;
+        width: 100vw;
+        a{
+            display: block;
+            max-width: 800px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+    }
+    .main__btm--list{
+        display: flex;
+        flex-wrap: wrap!important;
+        li{
+            margin-bottom: 50px;
+        }
+    }
+}
+/* SP画面サイズ ------------------------------------------------------- */
+
+@media screen and (max-width: $BP) {
+#sp2{
+.main {
+        width: 100vw;
+
+        &__top {
+            background-color: $BG;
+            background-image: url($PATH+'/bg_pc.webp');
+            background-position: center 0;
+            background-repeat: no-repeat;
+            padding-bottom: 110px;
+            width: 100vw;
+        }
+
+        &__btm {
+            background-image: url($PATH+'/bg_btm.webp');
+            background-position: 0 0;
+            background-repeat: repeat;
+            background-size: 40px 40px;
+            width: 100vw;
+            padding-bottom: 1vw;
+            img {
+                width: 100%;
+            }
+
+            picture {
+                width: 100%;
+            }
+
+            &--inner {
+                max-width: 100%;
+                margin: 0 auto;
+                width: 100%;
+                padding: 0;
+            }
+
+            &--ttl {
+                text-align: center;
+                font-size: 0;
+                padding: 7vw 5% 8vw;
+                margin: 0;
+                img {
+                    width: 100%;
+                }
+            }
+
+            &--list {
+                &.annotetion {
+                    margin-bottom: 20px !important;
+                }
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0 3vw 0 4vw;
+                list-style: none;
+                li {
+                    margin: 0 auto 7.34vw!important;
+
+                    max-width: 48%;
+                    width: 48%;
+                }
+            }
+        }
+
+        &__wrapper {
+            max-width: $PCW;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &__ttl {
+            text-align: center;
+            margin: 0 auto 0;
+            font-size: 0;
+            padding: 0 14.22%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__txt {
+            text-align: center;
+            margin: 0 auto 0;
+            font-size: 0;
+            padding: 0 14.22%;
+
+            img {
+                width: 100%;
+            }
+
+            a {
+                display: block;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        &__ranking {
+            p {
+                text-align: center;
+                margin: 0 auto 0;
+                font-size: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            picture {
+                width: 100%;
+            }
+
+            &--firstinner {
+                position: absolute;
+                top: 0;
+                z-index: 3;
+            }
+
+            &--first {
+                padding: 0 3.33%;
+                position: relative;
+                max-height: 440px;
+                height: 440px;
+            }
+
+            &--lists {
+                width: 100%;
+                display: flex;
+                margin: 0 auto 0;
+                font-size: 0;
+                padding: 0;
+
+                li {}
+            }
+
+        }
+    }
+}
+}

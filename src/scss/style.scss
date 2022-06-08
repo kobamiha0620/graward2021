@@ -1,0 +1,427 @@
+@charset 'utf-8';
+@import 'reset';
+@import 'base';
+@import 'sp';
+
+
+// @use 'mixin' as mx;
+
+// @use 'contents/top';
+// @use 'contents/lineup';
+// @use 'contents/headersp';
+// @use 'contents/footer';
+
+body {
+    background-color: $BG;
+    margin: 0;
+    font-family: "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3", "ヒラギノ角ゴ Pro W3", "HiraKakuPro-W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS Pgothic", "Osaka", sans-serif, Helvetica, Helvetica Neue, Arial, Verdana;
+
+}
+
+.main {
+    width: 100vw;
+
+    &__top {
+        background-color: $BG;
+        background-image: url($PATH+'/bg_pc.webp');
+        background-position: center 0;
+        background-repeat: no-repeat;
+        padding-bottom: 110px;
+        width: 100vw;
+    }
+
+    &__btm {
+        background-image: url($PATH+'/bg_btm.webp');
+        background-position: 0 0;
+        background-repeat: repeat;
+        background-size: 80px 80px;
+        width: 100vw;
+
+        img {
+            width: 100%;
+        }
+
+        picture {
+            width: 100%;
+        }
+
+        &--inner {
+            max-width: 1097px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 115px 30px 20px;
+        }
+
+        &--ttl {
+            text-align: center;
+            margin: 0 auto 32px;
+            font-size: 0;
+            padding: 0 22.85%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &--list {
+            &.annotetion {
+                margin-bottom: 20px !important;
+            }
+
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 auto 50px;
+            font-size: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                max-width: 24.59%;
+                width: 24.59%;
+                list-style: none;
+
+            }
+        }
+    }
+
+    &__wrapper {
+        max-width: $PCW;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    &__ttl {
+        text-align: center;
+        margin: 0 auto 0;
+        font-size: 0;
+        padding: 0 14.22%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__txt {
+        text-align: center;
+        margin: 0 auto 0;
+        font-size: 0;
+        padding: 0 14.22%;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            display: block;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__ranking {
+        p {
+            text-align: center;
+            margin: 0 auto 0;
+            font-size: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        picture {
+            width: 100%;
+        }
+
+        &--firstinner {
+            position: absolute;
+            top: 0;
+            z-index: 3;
+        }
+
+        &--first {
+            padding: 0 3.33%;
+            position: relative;
+            max-height: 440px;
+            height: 440px;
+        }
+
+        &--lists {
+            width: 100%;
+            display: flex;
+            margin: 0 auto 0;
+            font-size: 0;
+            padding: 0;
+
+            li {}
+        }
+
+    }
+}
+
+.footer {
+    width: 100vw;
+    padding: 53px 0 147px;
+    background: #711585;
+
+    &__inner {
+        max-width: 980px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__blc {
+        border-bottom: solid 1px #FFF;
+        padding: 0 26px 30px 66px;
+    }
+
+    &__cont {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__grbtxt {
+        width: 100%;
+        padding-left: 54px;
+
+        p {
+            color: #FFF;
+            font-size: 12px;
+            line-height: 2.3;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__copyright {
+        color: #FFF;
+        padding: 27px 0 47px;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        line-height: 1;
+    }
+}
+
+.logo {
+    &__GRP {
+        width: 175px;
+        height: 90px;
+
+        span {
+            background: url('../img/logo_grb.svg') no-repeat 0 0;
+            background-size: 100% auto;
+            width: 175px;
+            height: 90px;
+            display: block;
+            white-space: nowrap;
+            text-indent: -9999px;
+        }
+    }
+
+    &__TW {
+        background: url('../img/logo_tw.svg') no-repeat 0 0;
+        background-size: 100% auto;
+        width: 181px;
+        height: 47px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+        text-indent: -9999px;
+    }
+}
+
+
+
+@media screen and (min-width: $BP) {
+/* タブレット用レイアウト 600px以上の範囲に収めるデザインはこの中に記述 */
+    .main__ranking--first{
+        position: relative;
+        height: 34.29vw;
+    }
+
+}
+
+/* PC 画面サイズが769px以上 */
+@media screen and (min-width: $BP+1) {
+
+    .sp {
+        display: none;
+    }
+
+    .pc {
+        display: block;
+    }
+}
+
+
+
+.mt40 {
+    margin-top: -40px;
+}
+
+/* SP画面サイズ ------------------------------------------------------- */
+@media screen and (max-width: $BP) {
+    .sp {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .main {
+
+        &__top {
+            background: $BG;
+            padding-bottom: 22vw;
+            width: 100vw;
+        }
+        &__wrapper {
+            max-width: 100vw;
+            margin: 0;
+            width: 100vw;
+        }
+
+        &__ttl {
+            text-align: center;
+            margin: 9vw auto 0;
+            font-size: 0;
+            padding: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__txt {
+            text-align: center;
+            margin: 0 auto 0;
+            font-size: 0;
+            padding: 0;
+            img {
+                width: 100%;
+            }
+            a {
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .spmain{
+        width: 100vw;
+        background: url('../img/bg_spmain_02.png') no-repeat 0 0;
+        background-size: 100% auto;
+        img{
+            width: 100%;
+        }
+        picture{
+            width: 100%;
+        }
+        // &__first{
+        //     position: relative;
+        //     background: url('../img/bg_spfirst.png') no-repeat right 0 top 5vw;
+        //     background-size: 100% auto;
+        // }
+        &__list{
+            display: flex;
+
+        }
+        &__ten{
+            width: 57.2vw;
+            img{
+                width: 100%;
+            }
+            // &--wrapper{
+            //     width: 100vw;
+            //     background: url('../img/bg_spten.png') no-repeat right 0 top 27vw;
+            //     background-size: 45vw auto; 
+            // }
+        }
+    }
+
+    .footer {
+        width: 100vw;
+        padding: 6vw 5% 10vw;
+
+        &__inner {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__blc {
+            padding: 0 0;
+        }
+
+        &__cont {
+            display: block !important;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__grbtxt {
+            width: 100%;
+            padding-left: 0;
+
+            p {
+                font-size: 10px;
+                line-height: 1.4;
+                padding: 10px 0;
+            }
+        }
+
+        &__copyright {
+            padding: 5.94vw 0 3.43vw;
+            font-size: 7px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            line-height: 1;
+
+        }
+
+        &__splink {
+            background: #FFF;
+            padding: 6.4vw 10vw;
+
+            a {
+                display: block;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .logo {
+        &__GRP {
+            width: 100%;
+            height: auto;
+
+            span {
+                background: url('../img/sp_logogrp.svg') no-repeat 0 0;
+                background-size: 100% auto;
+                width: 52.5vw;
+                height: 9.37vw;
+                display: block;
+            }
+
+
+        }
+
+        &__TW {
+            background-size: 100% auto;
+
+            width: 28.28vw;
+            height: 7.34vw;
+        }
+    }
+
+}
