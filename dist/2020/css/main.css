@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	margin:0;
+padding:0;
+width:100%;
+}
+
+.pc_area{
+	display:block;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+
+.pc_area img{
+	
+	width:100%;
+	height:auto;
+	padding:0;
+	margin:0;
+	vertical-align: bottom;
+	
+}
+
+
+.sp_area{
+	display:none;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+
+.sp_area img{
+	
+	width:100%;
+	height:auto;
+	padding:0;
+	margin:0;
+	vertical-align: bottom;
+	
+}
+
+
+
+	
+
+
+/*-- max-width:769px ------------------------------------------------------------------------------------------------------------------------ */
+@media screen and (max-width: 768px){
+.pc_area{
+	display:none;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+
+.pc_area img{
+	
+	width:100%;
+	height:auto;
+	padding:0;
+	margin:0;
+	vertical-align: bottom;
+	
+}
+
+
+.sp_area{
+	display: block;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+
+.sp_area img{
+	
+	width:100%;
+	height:auto;
+	padding:0;
+	margin:0;
+	vertical-align: bottom;
+	
+}
+
+
+}
+
